@@ -1,0 +1,27 @@
+#map {
+  height: calc(100vh - 4rem);
+}
+
+@media (max-width: 640px) {
+  input::-webkit-input-placeholder {
+    @apply text-xs;
+  }
+}
+.search-box {
+  z-index: 99999;
+}
+.maplibregl-popup-content {
+  border-radius: 1rem;
+}
+.search-result {
+  transform: translateY(-400%);
+  @apply absolute left-0 bottom-0 w-full bg-white rounded-xl shadow-xl opacity-0;
+}
+.search-result.active {
+  transform: translateY(calc(100% + 1rem));
+  @apply absolute left-0 bottom-0 w-full bg-white rounded-xl shadow-xl opacity-100;
+}
+
+.results::-webkit-scrollbar {
+  width: 0px;
+}
